@@ -21,11 +21,15 @@ public class ManosALaObra_ejercicio8 {
         Scanner leer = new Scanner(System.in);
         int respuesta = 0;
         System.out.println("Ingrese una nota a validar");
-        
-        while (respuesta.equalsIgnoreCase(> 0 || < 10)){
-            System.out.println("su nota es correcta");
-            respuesta = leer.nextInt();
+         respuesta = leer.nextInt();     
+            
+       
+         while (respuesta < 0 || respuesta > 10){
+            System.out.println("ingrese nuevamente");
+            respuesta = leer.nextInt();     
+            
         }
+         System.out.println("la nota es correcta");
     }
     
 }
