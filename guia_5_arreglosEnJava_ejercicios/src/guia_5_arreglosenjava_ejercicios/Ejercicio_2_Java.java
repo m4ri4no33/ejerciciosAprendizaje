@@ -21,10 +21,10 @@ public class Ejercicio_2_Java {
 
         System.out.println("Ingresar tamaño de vector");
         int dim = leer.nextInt();
-
+        int numb, cont = 0;
         int[] vector = new int[dim]; //DIMENSIONA
 
-       // RELLENO ALEATORIO
+        // RELLENO ALEATORIO
         for (int i = 0; i < dim; i++) {
             vector[i] = (int) (Math.random() * 99);
         }
@@ -33,5 +33,21 @@ public class Ejercicio_2_Java {
             System.out.println("[" + vector[i] + "]");
 
         }
+        // ingresa numero a buscar
+        System.out.println("Ingrese numero a buscar");
+        numb = leer.nextInt();
+        
+        for (int i = 0; i < dim; i++) {
+            if (numb == vector[i]) {//compara numero en posicion de vector
+                System.out.println("El numero se uncuentra en " + i);
+                cont++;// aux contador si esta repetido
+            }
+        }
+        if (cont == 0) {//no esta el numero a buscar
+            System.out.println("El numero no se uncuentra en vector");
+        } else if ( cont > 1 )  {//cantador +1 valida repeticion
+            System.out.println("El numero se encuentra repetido"); 
+        }
+
     }
 }
