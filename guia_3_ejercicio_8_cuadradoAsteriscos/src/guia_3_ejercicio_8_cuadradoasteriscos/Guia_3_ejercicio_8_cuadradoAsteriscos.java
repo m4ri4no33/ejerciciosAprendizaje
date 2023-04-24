@@ -1,21 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package guia_3_ejercicio_8_cuadradoasteriscos;
 
-/**
- *
- * @author Mariano Benegas
+import java.util.Scanner;
+
+/* @author Mariano Benegas
  */
 public class Guia_3_ejercicio_8_cuadradoAsteriscos {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner Leer = new Scanner(System.in);
+        System.out.println("Ingrese tamaño cuadrado");
+        int tamaño = Leer.nextInt();
+
+        for (int i = 0; i < tamaño; i++) {
+            System.out.print("*");
+        }
+        System.out.println();// SALTO DE LINEA
+        
+        for (int i = 0; i < tamaño - 2; i ++) {
+            System.out.print("*");
+            for (int j = 0; j < tamaño - 2; j ++) {
+                System.out.print(" ");
+            }
+            System.out.println("*");
+        }
+
+        for (int i = 0; i < tamaño; i++) {
+            System.out.print("*");
+        }
+
     }
-    
 }

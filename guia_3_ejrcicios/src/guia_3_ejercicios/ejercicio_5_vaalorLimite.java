@@ -28,8 +28,9 @@ public class ejercicio_5_vaalorLimite {
                 System.out.print("La suma supero el limite inicial " + suma);
                 break;
             }
+            System.out.print(" ");
         }
-        System.out.print(" ");
+        
     }
 
 }
