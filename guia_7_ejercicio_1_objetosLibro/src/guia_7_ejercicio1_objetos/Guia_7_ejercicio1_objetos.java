@@ -20,7 +20,7 @@ public class Guia_7_ejercicio1_objetos {
         
         Libro Libro1 = new Libro();// creamos un nuevo objeto
         System.out.println("Ingrese ISBN");
-        Libro1.ISBN = Leer.nextInt();// darle un vvalor por teclado en main a la clase libro
+        Libro1.ISBN = Leer.nextInt();// darle un vvalor por teclado en main al atributo de la clase libro
         System.out.println("Ingrese Titulo");
         Libro1.titulo = Leer.next();
         System.out.println("Ingrese Autor");
