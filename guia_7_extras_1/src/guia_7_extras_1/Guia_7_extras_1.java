@@ -5,6 +5,8 @@
  */
 package guia_7_extras_1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Mariano Benegas
@@ -15,7 +17,14 @@ public class Guia_7_extras_1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Cancion nueva = new Cancion();
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese el nombre de la cancion");
+        nueva.titulo = leer.next();
+        System.out.println("Ingrese autor");
+        nueva.autor = leer.next();
+
+        System.out.println("La cancion se llama " + nueva.titulo + " su autor es " + nueva.autor);
     }
-    
+
 }

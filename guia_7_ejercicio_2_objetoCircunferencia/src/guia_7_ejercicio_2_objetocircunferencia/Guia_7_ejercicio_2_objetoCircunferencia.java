@@ -1,4 +1,3 @@
-
 package guia_7_ejercicio_2_objetocircunferencia;
 
 /*Declarar una clase llamada Circunferencia que tenga como atributo privado 
@@ -14,9 +13,11 @@ Método perimetro(): para calcular el perímetro (Perimetro=2*π*radio).
  */
 public class Guia_7_ejercicio_2_objetoCircunferencia {
 
-
     public static void main(String[] args) {
-       
+        Circunferencia nuevo = new Circunferencia();
+        nuevo.crearCincurferencia();
+        System.out.println("El area es: " + nuevo.calcularArea());
+        System.out.println("El perimetro es: " + nuevo.calcularPerimetro());
     }
-    
+
 }

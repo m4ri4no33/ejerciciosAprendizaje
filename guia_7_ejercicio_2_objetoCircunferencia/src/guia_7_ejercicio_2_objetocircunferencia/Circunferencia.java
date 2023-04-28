@@ -1,5 +1,7 @@
 package guia_7_ejercicio_2_objetocircunferencia;
 
+import java.util.Scanner;
+
 /*Declarar una clase llamada Circunferencia que tenga como atributo privado 
 el radio de tipo real. A continuación, se deben crear los siguientes métodos:
 Método constructor que inicialice el radio pasado como parámetro.
@@ -14,8 +16,9 @@ Método perimetro(): para calcular el perímetro (Perimetro=2*π*radio).
 public class Circunferencia {
 
     private double radio;
-    private double perimetro;
-    private double area;
+
+    public Circunferencia() {
+    }
 
     public Circunferencia(double radio) {
         this.radio = radio;
@@ -28,33 +31,23 @@ public class Circunferencia {
     public double getRadio() {
         return radio;
     }
-
-    public void setPerimetro(double perimetro) {
-        this.perimetro = perimetro;
+    
+    public void crearCincurferencia(){
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese la medida del radio para crear circunferencia");
+        radio = leer.nextInt();
+        
     }
 
-    public void setArea(double area) {
-        this.area = area;
+    public double calcularArea() {
+
+        return Math.pow((Math.PI * radio),2);
+
     }
 
-    public double getPerimetro() {
-        return perimetro;
-    }
+    public double calcularPerimetro() {
 
-    public double getArea() {
-        return area;
+        return (2 * (Math.PI * radio));
     }
     
-
-    public double calcularArea(double radio) {
-
-        area = ((Math.PI * radio) * (Math.PI * radio));
-        return area;
-        
-    }
-    public double calcularPerimetro(double radio){
-        
-        perimetro = (2*Math.PI*radio);
-        return perimetro;
-    }
 }

@@ -59,4 +59,10 @@ public class Empleado {
             System.out.println("Su Salario no tiene modificaciones");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" + "nombre=" + nombre + ", edad=" + edad + ", salario=" + salario + '}';
+    }
+    
 }

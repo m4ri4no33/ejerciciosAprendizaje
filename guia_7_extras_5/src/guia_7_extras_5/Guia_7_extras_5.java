@@ -5,6 +5,8 @@
  */
 package guia_7_extras_5;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Mariano Benegas
@@ -15,7 +17,19 @@ public class Guia_7_extras_5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+                           
+        Scanner leer = new Scanner(System.in);
+        Empleado nuevo = new Empleado();
+        System.out.println("Ingrese su nombre");
+        nuevo.nombre = leer.next();
+        System.out.println("Ingrese su edad");
+        nuevo.edad = leer.nextInt();
+        System.out.println("Ingrese su salario");
+        nuevo.salario = leer.nextInt();
+        nuevo.calcularAumento();
+        
+       
+        System.out.println(nuevo.toString());
     }
     
 }

@@ -29,13 +29,13 @@ public class Rectangulo {
     public void calcularSuperficie() {
         int superficie;
         superficie = this.base * this.altura;
-        System.out.println("La superficie es: "+ superficie);
+        System.out.println("La superficie es: " + superficie);
     }
 
     public void calcularPerimetro() {
         int perimetro;
         perimetro = (this.base + this.altura) * 2;
-        System.out.println("El perimetro es: "+ perimetro);
+        System.out.println("El perimetro es: " + perimetro);
     }
 
     public void setBase(int base) {
