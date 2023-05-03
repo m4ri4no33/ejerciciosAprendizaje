@@ -18,6 +18,7 @@ package guia_8_ejercicio_1_cuentabancaria;
 
 import Entidades.CuentaBancaria;
 import Servicio.CuentaBancariaServicio;
+import java.util.Scanner;
 
 
 /*
@@ -26,18 +27,55 @@ import Servicio.CuentaBancariaServicio;
 public class Guia_8_ejercicio_1_cuentaBancaria {
 
     public static void main(String[] args) {
-        CuentaBancaria cuenta = new CuentaBancaria(0, 0, 0);
-
+        int opcion = 0;
+        Scanner leer = new Scanner(System.in);
         CuentaBancariaServicio nueva = new CuentaBancariaServicio();
+        CuentaBancaria nuevaCuenta = nueva.crearCuentaBancaria();
 
-        nueva.crearCuentaBancaria(cuenta);
-        nueva.ingresaDinero(cuenta, 0);
+        while (opcion != 6) {
+            System.out.println();
+            System.out.println("Seleccione una opcion:");
+            System.out.println("1. Realizar Deposito");
+            System.out.println("2. Realizar Retiro");
+            System.out.println("3. Realizar Extraccion Rapida");
+            System.out.println("4. Consultar Saldo");
+            System.out.println("5. Consultar Datos");
+            System.out.println("6. Salir");
 
-       
-        
-        
+            opcion = leer.nextInt();
 
-       
+            switch (opcion) {
+                // case 1:
+                //     CuentaBancaria nuevaCuenta = nueva.crearCuentaBancaria();
+                //      break;
+                case 1:
+                    nueva.ingresaDinero(nuevaCuenta);
+                    break;
+                case 2:
+                    nueva.retiraDinero(nuevaCuenta);
+                    break;
+                case 3:
+                    nueva.extraccionRapida(nuevaCuenta);
+                    break;
+                case 4:
+                    nueva.consultaSaldo(nuevaCuenta);
+                    System.out.println("SALDO ACTUAL " + nuevaCuenta.getSaldoActual());
+                    break;
+                case 5:
+                    nueva.consultarDatos(nuevaCuenta);
+                    break;
+                case 6:
+                    System.out.println("Gracias por usar el servicio");
+                    break;
+
+                default:
+                    System.out.println("Opcion invalida, ingrese nuevamente");
+                    break;
+
+            }
+
+        }
+
     }
 
 }
