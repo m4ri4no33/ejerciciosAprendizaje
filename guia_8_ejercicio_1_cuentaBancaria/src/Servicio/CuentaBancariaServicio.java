@@ -23,7 +23,8 @@ public class CuentaBancariaServicio {
 
     private final Scanner leer = new Scanner(System.in);
 
-    public CuentaBancaria crearCuentaBancaria() {
+    public CuentaBancaria crearCuentaBancaria(CuentaBancaria cuenta) {
+
         System.out.println("Ingrese numero de cuenta");
         int numeroCuenta = leer.nextInt();
         System.out.println("Ingrese numero dni");
@@ -34,30 +35,35 @@ public class CuentaBancariaServicio {
         return new CuentaBancaria(numeroCuenta, dniCliente, saldoActual);
     }
 
-    public double ingresaDinero() {
-        CuentaBancaria saldo = new CuentaBancaria();
-        double ingreso;
-        System.out.println("Ingrese el monto a depositar");
-        ingreso = leer.nextDouble();
-        return saldo.saldoActual + ingreso;
+    public double ingresaDinero(CuentaBancaria cuenta, double monto) {
+
+        System.out.println("Ingrese monto a depositar");
+        monto = leer.nextDouble();
+        double saldoActual = cuenta.getSaldoActual();
+        saldoActual += monto;
+        cuenta.setSaldoActual(saldoActual);
+        return saldoActual;
+
     }
 
-    public double retiraDinero() {
-        CuentaBancaria saldo = new CuentaBancaria();
-        double retiro, aux;
-        System.out.println("Ingrese el monto a retirar");
-        retiro = leer.nextDouble();
-        aux = saldo.saldoActual;
-        if (retiro < saldo.saldoActual) {            
-            
-            System.out.println("Su retiro supera el saldo actual se entregara " + aux);
-            saldo.saldoActual - aux;
+    public double retiraDinero(CuentaBancaria cuenta, double monto) {
+
+        double saldoActual = cuenta.getSaldoActual();
+        System.out.println("Ingrese el monto a extraer");
+        monto = leer.nextDouble();
+
+        if (monto <= saldoActual) {
+            saldoActual -= monto;
+            cuenta.getSaldoActual();
         } else {
-            saldo.saldoActual - retiro;
+            System.out.println("El monto a extraer es superior al saldo "+ saldoActual);
+            System.out.println("El maximo a extraer es de "+ saldoActual);
+            cuenta.setSaldoActual(0);
+            
         }
 
-        return saldo.saldoActual;
     }
+    
 
     public double extraccionRapida() {
         CuentaBancaria saldo = new CuentaBancaria();
@@ -71,5 +77,7 @@ public class CuentaBancariaServicio {
         rapido = leer.nextDouble();
         return;
     }
+
+}
 
 }

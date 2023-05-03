@@ -11,9 +11,9 @@ package Entidades;
  */
 public class CuentaBancaria {
 
-    public int numeroCuenta;
-    public long dniCliente;
-    public double saldoActual;
+    private int numeroCuenta;
+    private long dniCliente;
+    private double saldoActual;
 
     public CuentaBancaria() {
     }

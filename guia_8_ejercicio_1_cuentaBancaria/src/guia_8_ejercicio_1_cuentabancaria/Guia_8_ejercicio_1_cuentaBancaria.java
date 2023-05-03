@@ -18,7 +18,7 @@ package guia_8_ejercicio_1_cuentabancaria;
 
 import Entidades.CuentaBancaria;
 import Servicio.CuentaBancariaServicio;
-import java.io.PrintStream;
+
 
 /*
  * @author Mariano Benegas
@@ -26,19 +26,18 @@ import java.io.PrintStream;
 public class Guia_8_ejercicio_1_cuentaBancaria {
 
     public static void main(String[] args) {
+        CuentaBancaria cuenta = new CuentaBancaria(0, 0, 0);
+
+        CuentaBancariaServicio nueva = new CuentaBancariaServicio();
+
+        nueva.crearCuentaBancaria(cuenta);
+        nueva.ingresaDinero(cuenta, 0);
+
+       
         
         
-        CuentaBancariaServicio rtr = new CuentaBancariaServicio();
 
-        rtr.crearCuentaBancaria();
-
-        rtr.ingresaDinero();
-        double cuenta = rtr.ingresaDinero();
-        
-        System.out.println("Su saldo es: " + cuenta);
-
-        rtr.retiraDinero();
-        rtr.extraccionRapida();
+       
     }
 
 }
