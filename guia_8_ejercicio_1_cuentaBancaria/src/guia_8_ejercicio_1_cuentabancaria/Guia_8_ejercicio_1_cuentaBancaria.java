@@ -30,7 +30,8 @@ public class Guia_8_ejercicio_1_cuentaBancaria {
         int opcion = 0;
         Scanner leer = new Scanner(System.in);
         CuentaBancariaServicio nueva = new CuentaBancariaServicio();
-        CuentaBancaria nuevaCuenta = nueva.crearCuentaBancaria();
+        CuentaBancaria nuevaCuenta = nueva.crearCuentaBancaria();      
+       
 
         while (opcion != 6) {
             System.out.println();
