@@ -33,12 +33,11 @@ public class CafeteraServicio {
         llenar = leer.nextInt();
         if (llenar > capMax) {
             System.out.println("No es posible llenar, supera la CAPACIDAD MAXIMA ahora tiene: " + cafetera.getCantidadActual());
-        }
-
-        if (capAct + llenar > capMax) {
+        }else if (capAct + llenar > capMax) {
             System.out.println("No es posible llenar, supera la CAPACIDAD MAXIMA ahora tiene: " + cafetera.getCantidadActual());
-        }
+        } else {
         cafetera.setCantidadActual(capAct + llenar);
+        }
     }
 
     public void servirTaza(Cafetera cafetera) {

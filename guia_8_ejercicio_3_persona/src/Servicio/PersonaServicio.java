@@ -39,16 +39,18 @@ public class PersonaServicio {
         nueva.setNombre(leer.next());
         System.out.println("Ingrese su edad");
         nueva.setEdad(leer.nextInt());
+        leer.nextLine();
         System.out.println("Ingrese genero H-hombre, M-mujer, O-otro");
         nueva.setGenero(leer.nextLine().charAt(0));
         while (nueva.getGenero() != 'H' && nueva.getGenero() != 'M' && nueva.getGenero() != 'O') {
             System.out.println("Genero incorrecto , ingrese nuevamente");
-            nueva.setGenero(leer.next().charAt(0));
+            nueva.setGenero(leer.nextLine().charAt(0));
         }
-        System.out.println("Ingrese su peso actual en Kg ejem: 81.50");
+        System.out.println("Ingrese su peso actual en Kg ejem: 81,50");
         nueva.setPeso(leer.nextDouble());
-        System.out.println("Ingrese su altura en Mtr ejem: 1.83");
+        System.out.println("Ingrese su altura en Mtr ejem: 1,83");
         nueva.setAltura(leer.nextDouble());
+        leer.nextLine();
 
         return nueva;
 
@@ -74,5 +76,6 @@ public class PersonaServicio {
         }
         return aux;
     }
+   
 
 }

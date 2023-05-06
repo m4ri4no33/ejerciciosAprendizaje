@@ -22,14 +22,39 @@ import java.util.Scanner;
  */
 public class Guia_8_ejercicio_3_persona {
 
-    
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         PersonaServicio nueva = new PersonaServicio();
-        Persona primera = nueva.creaPersona();
-        Persona segunda = nueva.creaPersona();
-        Persona tercera = nueva.creaPersona();
-        Persona cuarta = nueva.creaPersona();
+        //Persona nuevaPersona = nueva.creaPersona();
+        int resIMC, cont = 0, pI = 0, sp = 0, vp = 0, menores = 100;
+
+        Persona[] persona = new Persona[4];
+        for (int i = 0; i <= 3; i++) {
+            persona[i] = nueva.creaPersona();
+            resIMC = nueva.calcularIMC(persona[i]);
+            if (nueva.esMayorDeEdad(persona[i])) {
+                cont++;
+            }
+            if (resIMC == 0) {
+                pI++;
+            }
+            if (resIMC == 1) {
+                sp++;
+            }
+            if (resIMC == -1) {
+                vp++;
+            }
+
+        }
+        cont = cont * 100 / 4;
+        menores = menores - cont;
+        System.out.println("La cantidad de mayores de edad es: " + cont + "% y " + menores + "% menores de edad");
+        pI = pI * 100 / 4;
+        sp = sp * 100 / 4;
+        vp = vp * 100 / 4;
+        System.out.println("El " + pI + "% esta en su peso ideal");
+        System.out.println("El " + sp + "% esta en sobrepeso");
+        System.out.println("El " + vp + "% esta por debajo de su peso");
 
     }
 
