@@ -29,6 +29,7 @@ public class Guia_8_ejercicio_3_persona {
         int resIMC, cont = 0, pI = 0, sp = 0, vp = 0, menores = 100;
 
         Persona[] persona = new Persona[4];
+        
         for (int i = 0; i <= 3; i++) {
             persona[i] = nueva.creaPersona();
             resIMC = nueva.calcularIMC(persona[i]);

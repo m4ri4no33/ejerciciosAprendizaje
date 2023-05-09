@@ -10,7 +10,8 @@ package Entidad;
  * @author Mariano Benegas
  */
 public class Raices {
-  private double a, b, c;
+
+    private double a, b, c;
 
     public Raices() {
     }
@@ -44,8 +45,5 @@ public class Raices {
     public void setC(double c) {
         this.c = c;
     }
-  
-  
-  
-    
+
 }
