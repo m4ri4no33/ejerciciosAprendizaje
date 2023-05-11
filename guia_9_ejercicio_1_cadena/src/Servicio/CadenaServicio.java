@@ -29,29 +29,73 @@ import java.util.Scanner;
  */
 public class CadenaServicio {
 
-    private final Scanner leer = new Scanner(System.in);
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
+    // Cadena cade = new Cadena();
 
     public void mostrarVocales(Cadena cadena) {
         int cont = 0;
 
         for (int i = 0; i < cadena.getLongitud(); i++) {
             String letra = cadena.getFrase().substring(i, i + 1);
-            if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+
+            if ("a".equals(letra) || "e".equals(letra) || "i".equals(letra) || "o".equals(letra) || "u".equals(letra)) {
                 cont++;
             }
         }
-        return cont;
+        System.out.println("La cantidad de vocales que aparecen en la frase es " + cont);
     }
 
     public void invertirFrase(Cadena cadena) {
-        
-        for (int i = cadena.getLongitud(); i >= 0 ; i--){
+        for (int i = cadena.getLongitud() - 1; i >= 0; i--) {
             System.out.print(cadena.getFrase().charAt(i));
+
+        }
+        System.out.println("");
+    }
+
+    public void vecesRepetido(Cadena cadena) {
+        System.out.println("Ingrese el caracter a buscar en la frase");
+        String letra = leer.next();
+        int cont = 0;
+        for (int i = 0; i < cadena.getLongitud(); i++) {
+            if (letra.equals(cadena.getFrase().substring(i, i + 1))) {
+                cont++;
+            }
+
+        }
+        System.out.println(cont);
+    }
+
+    public void compararLongitud(Cadena cadena) {
+        System.out.println("Ingrese otra frase para comparar longitud");
+        String frase = leer.next();
+        if (frase.length() == cadena.getLongitud()) {
+            System.out.println("La longitud de las frases es igual");
+        } else if (frase.length() < cadena.getLongitud()) {
+            System.out.println("La primer frase ingresada es mas larga que la segunda");
+        } else {
+            System.out.println("La segunda frase ingresada es mas larga que la primera");
+        }
 
     }
 
+    public void unirFrases(Cadena cadena) {
+        System.out.println("Ingrese una frase para unir a la primer frase");
+        String frase = leer.next();
+        System.out.println(cadena.getFrase().concat(frase));
+    }
 
-public void 
-    
-}
+    public void reemplazar(Cadena cadena) {
+        System.out.println("Ingrese un caracter para reemplazar la vocal a en su frase");
+        String letra = leer.next();
+
+        System.out.println(cadena.getFrase().replaceAll("a", letra));
+    }
+
+    public boolean contiene(Cadena cadena) {
+        System.out.println("Ingrese un caracter a buscar en la frase");
+        char letra = leer.next().charAt(0);
+        return cadena.getFrase().contains(Character.toString(letra));
+    }
+
 }
