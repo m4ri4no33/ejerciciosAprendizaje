@@ -28,8 +28,12 @@ public class Guia_9_ejercicio_2_parDeNumeros {
         ParDeNumeros numeros = new ParDeNumeros();
         ParDeNumerosServicio numSer = new ParDeNumerosServicio();
         
-        numSer.mostrarValores(numeros);
-        numSer.devolverMayor(numeros);
+        numSer.mostrarValores(numeros);        
+        System.out.println("EL VALOR MAYOR ES: " + numSer.devolverMayor(numeros));
+        System.out.println("RESULTADO DEL CALCULO DE POTENCIA MAYOR ELEVADO AL MENOR : "+ numSer.calcularPotencia(numeros));
+        System.out.println("RESULTADO DE LA RAIZ DEL MENOR VALOR : "+ numSer.calculaRaiz(numeros));
+        
+        
     }
     
 }

@@ -17,19 +17,28 @@ import Entidad.ParDeNumeros;
  * @author Mariano Benegas
  */
 public class ParDeNumerosServicio {
-    
-    public void mostrarValores(ParDeNumeros numeros){
+
+    public void mostrarValores(ParDeNumeros numeros) {
         System.out.println("LOS VALORES SON");
         System.out.println("NUMERO 1: " + numeros.getN1());
         System.out.println("NUMERO 2: " + numeros.getN2());
     }
-    
-    public void devolverMayor(ParDeNumeros numeros){
-        String retorno = (numeros.getN1()> numeros.getN2()) ? " el Primer valor es: " : "el segundo valor es: ";
-        System.out.println(retorno);
-        }
+
+    public double devolverMayor(ParDeNumeros numeros) {
+        //String retorno = (numeros.getN1()> numeros.getN2()) ? " el Primer valor es: " : "el segundo valor es: ";
+        //System.out.println(retorno);
+        return Math.max(numeros.getN1(), numeros.getN2());
     }
-    
 
-    
+    public double calcularPotencia(ParDeNumeros numeros) {
+        double potencia = Math.pow((Math.round(Math.max(numeros.getN1(), numeros.getN2()))), Math.round(Math.min(numeros.getN1(), numeros.getN2())));
+        return potencia;
+    }
 
+    public double calculaRaiz(ParDeNumeros numeros) {
+        double aux = Math.abs(Math.min(numeros.getN1(), numeros.getN2()));
+        System.out.println("EL VALOR ABSOLUTO ES : "+aux);
+        double raiz = Math.sqrt(aux);
+        return raiz;
+    }
+}
