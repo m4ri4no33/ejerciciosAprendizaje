@@ -8,6 +8,7 @@ package Entidad;
  * @author Mariano Benegas
  */
 public class Estudiante {
+
     private String nombre;
     private double notaFinal;
 
@@ -39,5 +40,5 @@ public class Estudiante {
     public String toString() {
         return "ALUMNO {" + "nombre = " + nombre + ", notaFinal = " + notaFinal + '}';
     }
-    
+
 }

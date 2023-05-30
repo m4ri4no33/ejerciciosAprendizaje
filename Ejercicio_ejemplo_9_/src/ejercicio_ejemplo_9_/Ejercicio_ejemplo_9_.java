@@ -31,11 +31,12 @@ public class Ejercicio_ejemplo_9_ {
 
     public static void main(String[] args) {
         EstudiantesServicio sv = new EstudiantesServicio();
-        
-        
-        
-        Estudiante[] arr = new Estudiante[8];
-        sv.crearEstudiante(arr);
+
+        Estudiante[] alumno = new Estudiante[2];
+
+        sv.crearEstudiante(alumno);
+        sv.promedio(alumno);
+
     }
 
 }
