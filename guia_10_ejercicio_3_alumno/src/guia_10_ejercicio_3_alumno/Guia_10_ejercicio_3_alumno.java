@@ -14,17 +14,19 @@ mostrado en el main.
  */
 package guia_10_ejercicio_3_alumno;
 
-/**
- *
+import Servicio.AlumnoServicio;
+/*
  * @author Mariano Benegas
  */
 public class Guia_10_ejercicio_3_alumno {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        AlumnoServicio aluServ = new AlumnoServicio();
+        
+        aluServ.crearAlumno();
+        aluServ.notaFinal();
+        
     }
     
 }
