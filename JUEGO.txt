@@ -1,0 +1,34 @@
+package Entidad;
+
+import java.util.ArrayList;
+
+public class Juego {
+    ArrayList<Jugador> jugadores;
+    RevolverAgua revolver;
+    
+    public void llenarJuego(ArrayList<Jugador> jugadores, RevolverAgua r){
+        this.jugadores = jugadores;
+        revolver = r;
+        
+    }
+    
+    public void ronda(){
+        int cantidadJugadores = jugadores.size();
+        int indice = 0;
+        
+        while(true){
+            Jugador jugadorActual = jugadores.get(indice);
+            boolean mojado = jugadorActual.disparo(revolver);
+            
+            if(mojado){
+                System.out.println("Se ha mojado!! " + jugadorActual.getNombre() + ":(");
+                break;
+            }
+            
+            indice = (indice+1) % cantidadJugadores;
+        }
+        
+    }
+    
+    
+}
