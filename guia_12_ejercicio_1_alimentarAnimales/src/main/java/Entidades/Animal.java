@@ -59,8 +59,9 @@ public class Animal {
     }
     
     public void alimentarse(){
-        System.out.println("-------------------------------------------");
-        System.out.println("ESTE ANIMAL SE ALIMENTA DE " );
-        
+        System.out.println("ESTE ANIMAL SE ALIMENTA DE ");
     }
+       
+        
+    
 }

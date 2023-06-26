@@ -20,6 +20,8 @@ public class Perro extends Animal{
             
     @Override
     public void alimentarse(){
+        super.alimentarse();
+        System.out.println(super.getNombre());
         System.out.println(super.getAlimento());
         System.out.println("-------------------------------------------");
     }
