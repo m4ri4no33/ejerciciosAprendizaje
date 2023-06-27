@@ -116,7 +116,8 @@ public class Guia_12_ejercicio_2_electrodomesticos {
         double suma = 0;
 
         for (Electrodomestico artefacto : tienda) {
-
+                        
+            
             artefacto.precioFinal(artefacto);
             System.out.println(artefacto.toString());
             System.out.println("EL PRECIO FINAL ES DE : $ " + artefacto.getPrecio());
@@ -128,3 +129,8 @@ public class Guia_12_ejercicio_2_electrodomesticos {
 
     }
 }
+/*if (artefacto instanceof Lavadora) {
+                ((Lavadora) artefacto).precioFinal(artefacto);
+                  if (artefacto instanceof Televisor) {
+                      ((Televisor) artefacto).precioFinal(artefacto);
+                      */
