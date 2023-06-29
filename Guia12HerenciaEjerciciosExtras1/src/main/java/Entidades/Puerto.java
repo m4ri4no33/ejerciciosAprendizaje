@@ -1,13 +1,8 @@
 
 package Entidades;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- *
- * @author Mariano Benegas
- */
 public class Puerto {
     
     private HashMap<Integer,Amarre> Amarres ;
@@ -26,7 +21,6 @@ public class Puerto {
     public void setAmarres(HashMap<Integer, Amarre> Amarres) {
         this.Amarres = Amarres;
     }
-    
     
     
     

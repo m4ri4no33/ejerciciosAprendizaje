@@ -1,21 +1,12 @@
+
 package Entidades;
 
-/**
- *
- * @author Mariano Benegas
- */
-public class BarcoMotor extends Barco {
+public class BarcosMotor extends Barco {
 
     private Integer potencia;
 
-    public BarcoMotor() {
-    }
-
-    public BarcoMotor(Integer potencia) {
-        this.potencia = potencia;
-    }
-
-    public BarcoMotor(Integer potencia, Integer matricula, Double eslora, Integer anoFabricacion) {
+    
+    public BarcosMotor(Integer potencia, Integer matricula, Double eslora, Integer anoFabricacion) {
         super(matricula, eslora, anoFabricacion);
         this.potencia = potencia;
     }
@@ -30,12 +21,15 @@ public class BarcoMotor extends Barco {
 
     @Override
     public String toString() {
-        return "\n BarcoMotor" + "potencia " + potencia;
+        return "BarcosMotor{" + "potencia=" + potencia + '}';
     }
 
     @Override
     public double calculaAlquiler() {
-        return (super.calculaAlquiler() + getPotencia());
+        return (super.calculaAlquiler()+getPotencia() );
     }
-
+    
+    
+    
+    
 }

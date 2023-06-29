@@ -68,7 +68,7 @@ carga es menor o igual, no se incrementará el precio. Este método debe llamar 
 método padre y añadir el código necesario. Recuerda que las condiciones que hemos
 visto en la clase Electrodoméstico también deben afectar al precio.*/
     public void precioFinal(Lavadora artefacto) {
-        //super.precioFinal(artefacto);
+        super.precioFinal(artefacto);
         if (artefacto.getCarga() > 30) {
             artefacto.setPrecio(artefacto.getPrecio() + 500);
         }

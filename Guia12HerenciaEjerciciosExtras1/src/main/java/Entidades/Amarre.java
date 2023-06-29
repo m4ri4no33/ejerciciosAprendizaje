@@ -1,12 +1,7 @@
-
 package Entidades;
 
 import java.util.Date;
 
-/**
- *
- * @author Mariano Benegas
- */
 public class Amarre {
 
     private String nombre;
@@ -80,11 +75,5 @@ public class Amarre {
     public String toString() {
         return "Amarre{" + "nombre=" + nombre + ", dni=" + dni + ", fechaAlquiler=" + fechaAlquiler + ", fechadevolucion=" + fechadevolucion + ", posicionAmarre=" + posicionAmarre + ", barco=" + barco + '}';
     }
-   
-
- 
-    
 
 }
-
-

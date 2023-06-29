@@ -18,8 +18,18 @@ Utilizando la herencia de forma apropiada, deberemos programar en Java, las clas
 métodos necesarios que permitan al usuario elegir el barco que quiera alquilar y mostrarle el
 precio final de su alquiler.
  */
-
 package Main;
+
+import Entidades.Amarre;
+import Entidades.Barco;
+import Entidades.BarcoMotor;
+import Entidades.Puerto;
+import Entidades.Velero;
+import Entidades.Yates;
+import java.time.Clock;
+import java.time.Instant;
+import java.util.Date;
+import java.util.Scanner;
 
 /**
  *
@@ -28,6 +38,29 @@ package Main;
 public class Guia_12_ejercicioExtra_barcos {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+
+        Puerto nuevo = new Puerto();
+        Amarre amarre = new Amarre();
+        Barco barco = new Barco(254, 155d, 2010);
+        BarcoMotor barcoMotor = new BarcoMotor(300, 32523, 200d, 2009);
+        Velero velero = new Velero(5, 4589, 180d, 2020);
+        Yates yate = new Yates(20, 300, 2458, 220d, 2017);
+        
+        System.out.println("PARA ALQUILAR UNA UNIDAD DEBE INGRESAR LOS SIG DATOS");
+        System.out.println("INGRESE NOMBRE COMPLETO");
+        amarre.setNombre(leer.next());
+        System.out.println("INGRESE SU D.N.I.");
+        amarre.setDni(leer.nextLong());
+        System.out.println("INGRESE DESDE QUE FECHA DESEA ALQUILAR");
+        amarre.setFechaAlquiler(fechaAlquiler);
+
+        /* Amarre amarre1 = new Amarre("Minimi", 29058334L,
+                Date.from(Instant.now()),
+                Date.from(Instant.now(Clock.systemDefaultZone())),
+                Integer.MIN_VALUE,
+                new Barco(321231231, 250d, 2003));
+        System.out.println(amarre1);
+        System.out.println(amarre1.getBarco().calculaAlquiler());*/
     }
 }

@@ -1,12 +1,11 @@
-
 package Entidades;
 
 /**
  *
  * @author Mariano Benegas
  */
-public final class Velero extends Barco{
-    
+public final class Velero extends Barco {
+
     private Integer mastiles;
 
     public Velero() {
@@ -31,13 +30,12 @@ public final class Velero extends Barco{
 
     @Override
     public String toString() {
-        return "Velero{" + "mastiles=" + mastiles + '}';
+        return "\n Velero: cantidad de mastiles  " + mastiles;
     }
-    
-    
-    
-    
-    
-    
-    
+
+    @Override
+    public double calculaAlquiler() {
+        return (super.calculaAlquiler() + getMastiles());
+    }
+
 }

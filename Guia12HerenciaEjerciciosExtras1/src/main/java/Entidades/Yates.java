@@ -1,19 +1,12 @@
 
 package Entidades;
 
-/**
- *
- * @author Mariano Benegas
- */
-public class Yates extends BarcoMotor{
+
+public final class Yates extends BarcosMotor{
     
     private Integer camarotes;
 
-    public Yates() {
-    }
-
-
-    public Yates(Integer camarotes, Integer potencia, Integer matricula, Double eslora, Integer anoFabricacion) {
+    public Yates(Integer potencia, Integer matricula, Double eslora, Integer anoFabricacion, Integer camarotes) {
         super(potencia, matricula, eslora, anoFabricacion);
         this.camarotes = camarotes;
     }
@@ -28,12 +21,14 @@ public class Yates extends BarcoMotor{
 
     @Override
     public String toString() {
-        return "\n Yates cantidad camarotes " + camarotes ;
+        return "Yates{" + "camarotes=" + camarotes + '}';
+    }
+
+    @Override
+    public double calculaAlquiler() {
+        return (super.calculaAlquiler()+getCamarotes()); 
     }
     
-     @Override
-    public double calculaAlquiler() {
-        return (super.calculaAlquiler() + getCamarotes()); 
-    }
+    
     
 }

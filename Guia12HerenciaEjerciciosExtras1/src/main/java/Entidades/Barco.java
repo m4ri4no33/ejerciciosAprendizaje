@@ -1,18 +1,11 @@
 
 package Entidades;
 
-/**
- *
- * @author Mariano Benegas
- */
+
 public class Barco {
-    
     protected Integer matricula;
     protected Double eslora;
     protected Integer anoFabricacion;
-
-    public Barco() {
-    }
 
     public Barco(Integer matricula, Double eslora, Integer anoFabricacion) {
         this.matricula = matricula;
@@ -20,6 +13,10 @@ public class Barco {
         this.anoFabricacion = anoFabricacion;
     }
 
+    public Barco() {
+    }
+
+    
     public Integer getMatricula() {
         return matricula;
     }
@@ -49,9 +46,8 @@ public class Barco {
         return "Barco{" + "matricula=" + matricula + ", eslora=" + eslora + ", anoFabricacion=" + anoFabricacion + '}';
     }
     
-    public double calculaAlquiler(){//retorna valor modulo
-    return getEslora()*10;
-    }
+    public double calculaAlquiler(){
+    return getEslora()*10;}
     
     
     
