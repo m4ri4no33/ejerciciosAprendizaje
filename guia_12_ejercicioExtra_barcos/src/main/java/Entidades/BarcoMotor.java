@@ -30,7 +30,11 @@ public class BarcoMotor extends Barco {
 
     @Override
     public String toString() {
-        return "\n BarcoMotor" + "potencia " + potencia;
+        return "TIPO BARCO A MOTOR :"
+                + "\n POTENCIA CV : " + potencia
+                + "\n MATRICULA : " + super.getMatricula()
+                + "\n ESLORA : " + super.getEslora()
+                + "\n MODELO : " + super.getAnoFabricacion();
     }
 
     @Override

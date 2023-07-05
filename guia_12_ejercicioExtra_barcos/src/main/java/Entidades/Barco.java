@@ -1,12 +1,11 @@
-
 package Entidades;
 
 /**
  *
  * @author Mariano Benegas
  */
-public class Barco {
-    
+public abstract class Barco {
+
     protected Integer matricula;
     protected Double eslora;
     protected Integer anoFabricacion;
@@ -46,13 +45,14 @@ public class Barco {
 
     @Override
     public String toString() {
-        return "Barco{" + "matricula=" + matricula + ", eslora=" + eslora + ", anoFabricacion=" + anoFabricacion + '}';
+        return "TIPO BARCO:"
+                + "\n MATRICULA : " + matricula
+                + "\n ESLORA : " + eslora
+                + "\n MODELO :" + anoFabricacion;
     }
-    
-    public double calculaAlquiler(){//retorna valor modulo
-    return getEslora()*10;
+
+    public double calculaAlquiler() {//retorna valor modulo
+        return getEslora() * 10;
     }
-    
-    
-    
+
 }

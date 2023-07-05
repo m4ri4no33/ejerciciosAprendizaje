@@ -30,7 +30,12 @@ public final class Velero extends Barco {
 
     @Override
     public String toString() {
-        return "\n Velero: cantidad de mastiles  " + mastiles;
+        return "TIPO VELERO:"
+                + "\n MASTILES : " + mastiles
+                + "\n MATRICULA : " + super.getMatricula()
+                + "\n ESLORA : " + super.getEslora()
+                + "\n MODELO : " + super.getAnoFabricacion();
+        
     }
 
     @Override

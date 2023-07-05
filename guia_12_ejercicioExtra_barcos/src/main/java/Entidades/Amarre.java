@@ -1,6 +1,7 @@
 
 package Entidades;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -76,9 +77,17 @@ public class Amarre {
         this.barco = barco;
     }
 
+   
+
     @Override
     public String toString() {
-        return "Amarre{" + "nombre=" + nombre + ", dni=" + dni + ", fechaAlquiler=" + fechaAlquiler + ", fechadevolucion=" + fechadevolucion + ", posicionAmarre=" + posicionAmarre + ", barco=" + barco + '}';
+        return "ALQUILER : " 
+                + "\n NOMBRE: " + nombre 
+                + "\n DNI CLIENTE: " + dni 
+                + "\n FECHA INICIO ALQUILER: " + fechaAlquiler 
+                + "\n FECHA DEVOLUCION: " + fechadevolucion 
+                + "\n POSICION AMARRE: " + posicionAmarre 
+                + "\n TIPO DE BARCO: " + barco ;
     }
    
 

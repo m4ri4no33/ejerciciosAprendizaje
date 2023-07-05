@@ -28,7 +28,12 @@ public class Yates extends BarcoMotor{
 
     @Override
     public String toString() {
-        return "\n Yates cantidad camarotes " + camarotes ;
+         return "TIPO YATE LUJO: "
+                + "\n CAMAROTES : " + camarotes
+                + "\n POTENCIA CV: " + super.getPotencia()
+                + "\n MATRICULA : " + super.getMatricula()
+                + "\n ESLORA : " + super.getEslora()
+                + "\n MODELO : " + super.getAnoFabricacion();
     }
     
      @Override
