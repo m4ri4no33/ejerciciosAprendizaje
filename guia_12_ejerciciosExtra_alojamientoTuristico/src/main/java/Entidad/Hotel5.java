@@ -2,6 +2,9 @@
  • Hotel ***** Cantidad de Habitaciones, Número de camas, Cantidad de Pisos, Gimnasio,
 Nombre del Restaurante, Capacidad del Restaurante, Cantidad Salones de
 Conferencia, Cantidad de Suites, Cantidad de Limosinas, Precio de las Habitaciones.
+El precio de una habitación debe calcularse de acuerdo con la siguiente fórmula:
+PrecioHabitación = $50 + ($1 x capacidad del hotel) + (valor agregado por restaurante) + (valor
+agregado por gimnasio) + (valor agregado por limosinas).
  */
 package Entidad;
 
@@ -9,8 +12,8 @@ package Entidad;
  *
  * @author Mariano Benegas
  */
-public class Hotel5 extends Hotel4{
-    
+public class Hotel5 extends Hotel4 {
+
     private Integer cantSalonConferencia;
     private Integer cantSuites;
     private Integer cantLimusina;
@@ -18,7 +21,7 @@ public class Hotel5 extends Hotel4{
     public Hotel5() {
     }
 
-    public Hotel5(Integer cantSalonConferencia, Integer cantSuites, Integer cantLimusina, boolean gimnasio, String nombreResto, Integer capacResto, Integer habitaciones, Integer camas, Integer pisos, double precioH) {
+    public Hotel5(Integer cantSalonConferencia, Integer cantSuites, Integer cantLimusina, char gimnasio, String nombreResto, Integer capacResto, Integer habitaciones, Integer camas, Integer pisos, double precioH) {
         super(gimnasio, nombreResto, capacResto, habitaciones, camas, pisos, precioH);
         this.cantSalonConferencia = cantSalonConferencia;
         this.cantSuites = cantSuites;
@@ -83,10 +86,20 @@ public class Hotel5 extends Hotel4{
 
     @Override
     public String toString() {
-        return "Hotel5{" + "cantSalonConferencia=" + cantSalonConferencia + ", cantSuites=" + cantSuites + ", cantLimusina=" + cantLimusina + '}';
+        return "Hotel *****"
+                + "\n" + super.toString()
+                + "\nCantidad Salones de Conferencia: " + cantSalonConferencia 
+                + "\nCantidad Suites: " + cantSuites 
+                + "\nCantidad Limusinas: " + cantLimusina ;
     }
-    
-    
-    
-    
+
+    /*Valor agregado por las limosinas:
+       • $15 por la cantidad de limosinas del hotel.
+       POR CADA LIMOSINA???*/
+    @Override
+    public double precioHabitacion() {
+        setPrecioH(super.precioHabitacion() + (getCantLimusina() * 15));
+        return super.precioHabitacion() + (getCantLimusina() * 15);
+    }
+
 }

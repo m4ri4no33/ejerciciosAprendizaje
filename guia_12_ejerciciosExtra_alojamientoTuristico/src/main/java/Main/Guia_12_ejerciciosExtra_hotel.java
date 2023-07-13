@@ -30,7 +30,6 @@ Valor agregado por el gimnasio:
 Valor agregado por las limosinas:
 • $15 por la cantidad de limosinas del hotel.
 
-17
 En contraste, los Alojamientos Extra hoteleros proveen servicios diferentes a los de los
 hoteles, estando más orientados a la vida al aire libre y al turista de bajos recursos. Por cada
 Alojamiento Extrahotelero se indica si es privado o no, así como la cantidad de metros
@@ -49,6 +48,8 @@ Realizar un sistema de consulta que le permite al usuario consultar por diferent
 
 package Main;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Mariano Benegas
@@ -56,6 +57,10 @@ package Main;
 public class Guia_12_ejerciciosExtra_hotel {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+         
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        
+        
+        
     }
 }

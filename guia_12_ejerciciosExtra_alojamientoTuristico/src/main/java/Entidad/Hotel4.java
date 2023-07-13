@@ -20,27 +20,27 @@ package Entidad;
  *
  * @author Mariano Benegas
  */
-public class Hotel4 extends Hotel{
-    
-    private boolean gimnasio;
+public class Hotel4 extends Hotel {
+
+    private char gimnasio;
     private String nombreResto;
     private Integer capacResto;
 
     public Hotel4() {
     }
 
-    public Hotel4(boolean gimnasio, String nombreResto, Integer capacResto, Integer habitaciones, Integer camas, Integer pisos, double precioH) {
+    public Hotel4(char gimnasio, String nombreResto, Integer capacResto, Integer habitaciones, Integer camas, Integer pisos, double precioH) {
         super(habitaciones, camas, pisos, precioH);
         this.gimnasio = gimnasio;
         this.nombreResto = nombreResto;
         this.capacResto = capacResto;
     }
 
-    public boolean isGimnasio() {
+    public char getGimnasio() {
         return gimnasio;
     }
 
-    public void setGimnasio(boolean gimnasio) {
+    public void setGimnasio(char gimnasio) {
         this.gimnasio = gimnasio;
     }
 
@@ -94,26 +94,34 @@ public class Hotel4 extends Hotel{
 
     @Override
     public String toString() {
-        return "Hotel4{" + "gimnasio=" + gimnasio + ", nombreResto=" + nombreResto + ", capacResto=" + capacResto + '}';
+        return "Hotel ****" 
+                + "\n" + super.toString()
+                + "\nCategoria gimnasio: " + gimnasio 
+                + "\nNombre Restorante: " + nombreResto 
+                + "\nCapacidad comensales: " + capacResto ;
     }
 
     @Override
     public double precioHabitacion() {
+        
         double valor = 0;
-        if (getCapacResto()<30) {
+        
+        if (getCapacResto() < 30) {
             valor = 10;
-        } else if (getCapacResto()>= 30 && getCapacResto()<= 50){
+        } else if (getCapacResto() >= 30 && getCapacResto() <= 50) {
             valor = 30;
-        }else if (getCapacResto()>50){
+        } else if (getCapacResto() > 50) {
             valor = 50;
         }
-        return valor;
-       
+        if (getGimnasio() == 'A') {
+            valor = valor + 50;
+        } else if (getGimnasio() == 'B') {
+            valor = valor + 30;
+        }
+        setPrecioH(super.precioHabitacion() + valor);
+        
+        return super.precioHabitacion() + valor;
+
     }
-    
-    
-     
-    
-    
-    
+
 }

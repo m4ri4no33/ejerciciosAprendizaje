@@ -56,6 +56,16 @@ public class Guia_8_ejercicio_3_persona {
         System.out.println("El " + pI + "% esta en su peso ideal");
         System.out.println("El " + sp + "% esta en sobrepeso");
         System.out.println("El " + vp + "% esta por debajo de su peso");
+        
+        
+        // ejercicio Excepcion Persona Null.
+        persona [2] = null;
+        
+        try{
+            nueva.esMayorDeEdad(persona [2]);
+        } catch(NullPointerException aux){
+            System.out.println("getMessage: " + aux.getMessage());
+        }
 
     }
 

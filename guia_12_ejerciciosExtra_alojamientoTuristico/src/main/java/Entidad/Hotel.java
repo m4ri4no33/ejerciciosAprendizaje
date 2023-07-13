@@ -61,12 +61,16 @@ public class Hotel {
     }
 
     public double precioHabitacion() {
+        setPrecioH(getPrecioH() + (getCamas()));
         return getPrecioH() + (getCamas());
     }
 
     @Override
     public String toString() {
-        return "Hotel{" + "habitaciones=" + habitaciones + ", camas=" + camas + ", pisos=" + pisos + ", precioH=" + precioH + '}';
+        return "Cantidad de habitaciones: " + habitaciones 
+                + "\nCantidad de camas: " + camas 
+                + "\nCantidad de pisos: " + pisos 
+                + "\nPrecio base: " + precioH;
     }
 
 }
