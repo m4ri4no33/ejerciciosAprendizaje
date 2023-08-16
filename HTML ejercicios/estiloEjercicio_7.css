@@ -1,0 +1,30 @@
+*{
+    background-color: darkgrey;    
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+h2{
+    font-family: sans-serif;
+    text-align: center;    
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(201, 18, 18);
+    text-align: left;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: #cc0000;
+}
+a:hover{
+    background-color: #cc0000;
+    font-style: normal;
+    color: white;
+}
+a:visited{
+    color: #ccc;
+}

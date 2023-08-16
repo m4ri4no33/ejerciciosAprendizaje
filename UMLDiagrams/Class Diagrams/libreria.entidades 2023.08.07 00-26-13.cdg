@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="libreria.entidades">
+  <ClassDiagramComponents>
+    <Class name="Autor" package="libreria.entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="Integer" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="alta" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="Boolean" name="alta"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getAlta" returnType="Boolean" visibility="public"/>
+        <Method name="setAlta" returnType="void" visibility="public">
+          <Argument type="Boolean" name="alta"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="libreria.entidades" visibility="public" xPosition="389.0" yPosition="54.0">
+      <Fields>
+        <Field name="id" type="Integer" visibility="private"/>
+        <Field name="documento" type="Long" visibility="private"/>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="apellido" type="String" visibility="package"/>
+        <Field name="telefono" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="id"/>
+          <Argument type="Long" name="documento"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="telefono"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="getDocumento" returnType="Long" visibility="public"/>
+        <Method name="setDocumento" returnType="void" visibility="public">
+          <Argument type="Long" name="documento"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Editorial" package="libreria.entidades" visibility="public" xPosition="187.0" yPosition="408.0">
+      <Fields>
+        <Field name="id" type="Integer" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="alta" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="Boolean" name="alta"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getAlta" returnType="Boolean" visibility="public"/>
+        <Method name="setAlta" returnType="void" visibility="public">
+          <Argument type="Boolean" name="alta"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Libro" package="libreria.entidades" visibility="public" xPosition="51.0" yPosition="497.0">
+      <Fields>
+        <Field name="isbn" type="long" visibility="private"/>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="anio" type="Integer" visibility="private"/>
+        <Field name="ejemplares" type="Integer" visibility="private"/>
+        <Field name="ejemplaresPrestados" type="Integer" visibility="private"/>
+        <Field name="ejemplaresRestantes" type="Integer" visibility="private"/>
+        <Field name="alta" type="Boolean" visibility="private"/>
+        <Field name="autor" type="Autor" visibility="private"/>
+        <Field name="editorial" type="Editorial" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="isbn"/>
+          <Argument type="String" name="titulo"/>
+          <Argument type="Integer" name="anio"/>
+          <Argument type="Integer" name="ejemplares"/>
+          <Argument type="Integer" name="ejemplaresPrestados"/>
+          <Argument type="Integer" name="ejemplaresRestantes"/>
+          <Argument type="Boolean" name="alta"/>
+          <Argument type="Autor" name="autor"/>
+          <Argument type="Editorial" name="editorial"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIsbn" returnType="long" visibility="public"/>
+        <Method name="setIsbn" returnType="void" visibility="public">
+          <Argument type="long" name="isbn"/>
+        </Method>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getAnio" returnType="Integer" visibility="public"/>
+        <Method name="setAnio" returnType="void" visibility="public">
+          <Argument type="Integer" name="anio"/>
+        </Method>
+        <Method name="getEjemplares" returnType="Integer" visibility="public"/>
+        <Method name="setEjemplares" returnType="void" visibility="public">
+          <Argument type="Integer" name="ejemplares"/>
+        </Method>
+        <Method name="getEjemplaresPrestados" returnType="Integer" visibility="public"/>
+        <Method name="setEjemplaresPrestados" returnType="void" visibility="public">
+          <Argument type="Integer" name="ejemplaresPrestados"/>
+        </Method>
+        <Method name="getEjemplaresRestantes" returnType="Integer" visibility="public"/>
+        <Method name="setEjemplaresRestantes" returnType="void" visibility="public">
+          <Argument type="Integer" name="ejemplaresRestantes"/>
+        </Method>
+        <Method name="getAlta" returnType="Boolean" visibility="public"/>
+        <Method name="setAlta" returnType="void" visibility="public">
+          <Argument type="Boolean" name="alta"/>
+        </Method>
+        <Method name="getAutor" returnType="Autor" visibility="public"/>
+        <Method name="setAutor" returnType="void" visibility="public">
+          <Argument type="Autor" name="autor"/>
+        </Method>
+        <Method name="getEditorial" returnType="Editorial" visibility="public"/>
+        <Method name="setEditorial" returnType="void" visibility="public">
+          <Argument type="Editorial" name="editorial"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Prestamo" package="libreria.entidades" visibility="public" xPosition="951.0" yPosition="190.0">
+      <Fields>
+        <Field name="id" type="Integer" visibility="private"/>
+        <Field name="fechaPrestamo" type="Date" visibility="private"/>
+        <Field name="fechaDevolucion" type="Date" visibility="private"/>
+        <Field name="libro" type="Libro" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="autor" source="libreria.entidades.Libro" target="libreria.entidades.Autor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="editorial" source="libreria.entidades.Libro" target="libreria.entidades.Editorial" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="libreria.entidades.Libro" target="libreria.entidades.Autor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cliente" source="libreria.entidades.Prestamo" target="libreria.entidades.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="libreria.entidades.Libro" target="libreria.entidades.Editorial" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="libro" source="libreria.entidades.Prestamo" target="libreria.entidades.Libro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
