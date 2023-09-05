@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 en adelante</title>
+
+<link rel="stylesheet" href="Ejercicios 5.css">
+
+</head>
+<body>
+<div class="ContenedorDeTodo">
+
+    <div class="Ejercicio-1">
+        <h2>Ejercicio 1 </h2>
+
+        <select  id="select"  onclick="estadoclima()" name="">
+            <option value="Nublado" >Nulado </option>
+            <option value="Soleado" >Soleado</option>
+            <option value="Lloviendo" >Lloviendo</option>
+        </select>
+        <p id="Ejercicio1-resultado"></p>
+    </div>
+<div class="Ejercicio2">
+    <h2>Ejercicio 2</h2>
+    <label for="Ejercicio2-radio">Radio</label><br>
+    <input  id="Ejercicio2-radio" type="number" min="0"  placeholder="Ingrese radio"><br><br>
+   <button id="Ejercicio2-calcular" onclick="calcularRadioPerimetro()">Calcular</button><br>
+    <label id="Area" ></label><br>
+    <label id="Perimetro"></label><br>
+</div>
+<div class="Ejercicio3" >
+    <h2>Ejercicio 3</h2>
+    <label for="Edad">Ingresa tu Edad</label><br>
+    <input id="Ejercicio3-edad" type="number" min="1"  placeholder="Ingrese edad"><br><br>
+    <button id="Ejercicio2-calcular" onclick="calcularMayoriaEdad()">Calcular</button><br>
+    <label id="Edad" ></label><br><br>
+</div>
+<div class="Ejercicio4" >
+    <h2>Ejercicio 4</h2>
+    <label for="Char">Ingresa N o S </label><br>
+    <input id="Char" type="text"><br><br>
+    <button id="Ejercicio4-calcular" onclick="esNoS()">Calcular</button><br>
+    <label id="CharSalida" ></label><br><br>
+</div>
+   <!--Ejercicio 5-->
+<div class="inputs">
+    <h2>Ejercicio 5</h2>
+<label for="Numer1">Numero 1</label><br>
+<input  id="Numer1" type="number" required min="1" max="10" placeholder="1 -10"><br>
+<label for="Numer2" >Numero 2 </label><br>
+<input id="Numer2" type="number" required min="1" max="10" placeholder="1 -10" ><br><br>
+
+<button class="Operaciones" onclick="Operacion('suma')">Suma</button>
+<button class="Operaciones" onclick="Operacion('resta')" >Resta</button>
+<button class="Operaciones" onclick="Operacion('division')" >División</button>
+<button class="Operaciones" onclick="Operacion('multiplicacion')">multiplicacion</button>
+<p id="resultado"></p>
+<br><br>
+<p id="resultado"></p>
+ </div>
+
+ <div class="Ejercicio6">
+    <h2>Ejercicio 6</h2>
+    <label  class="Label_eje6" for="ParOnoPar">Ingresa un numero para saber si  es par</label><br><br>
+    <input  id="ParOnoPar" type="number" required min="-100" max="100"  placeholder="Numero"><br><br>
+    <button  onclick="ParOnoPar()">Verificar</button>
+    <p id="resultado_Ejercicio6"></p>
+
+ </div>
+ <div class="Ejercicio7">
+    <h2>Ejercicio7</h2>
+    <label>Ingrese el valor</label><br>
+    <input id="Ejercicio7-Numeros" type="number" min="0" placeholder="Ingrese Numero"><br><br>
+    <button onclick="InstanciarLimite()">Número Límite</button>
+    <button onclick="Acumulado()">Incrementar</button><br>
+    <label>El número Límite :</label>
+    <label id="numeroLimite"></label><br>
+    <label>El número acumulado es :</label>
+    <label id="Acumulado"></label>
+</div>
+
+ <div class="Ejercicio8">
+    <h2>Ejercicio 8</h2>
+    <h5>Ingrese números (0 para salir):</h5>
+    <input id="Ejercicio8_Numeros-Input" type="number" placeholder="Ingrese Numero">
+    <button id="btnAgregar">Agregar</button>
+    <p id="numerosIngresados"><p>
+ </div>
+<div  class="Ejercicio9">
+    <h2>Ingrese un texto:</h2>
+    <input id="Ejercicio9_Input" type="text" placeholder="Ingresa una frase">
+    <p id="Resultado"></p>
+
+   
+
+
+
+</div>
+
+
+
+
+<!--Contenedor final-->
+</div > 
+<script src="Ejercicio5.js"></script>      
+</body>
+
+</html>

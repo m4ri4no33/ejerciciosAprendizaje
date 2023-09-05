@@ -1,0 +1,39 @@
+.ContenedorDeTodo {
+display: flex;
+flex-wrap: wrap;
+background-size: contain;
+}
+div{
+    background-size: contain;
+    height: 500px;
+}
+/*botones*/
+
+    
+
+.inputs {
+    background-image: url('https://image.freepik.com/foto-gratis/paisaje-pequena-isla-rodeada-mar-cielo-nublado-luz-sol_181624-12243.jpg');
+    text-align: center;
+    size: 10cap;
+    text-size-adjust: 21px;
+    }
+      
+.Ejercicio6 {
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP.dz-JoqId18rk0Ov3ECZMugHaEK&pid=Api&P=0&h=180');
+      text-align: center;
+      font-style: oblique;
+      color:red;
+        size: 10cap;
+        text-size-adjust: 21px;
+}
+/*Ejercicio 7*/        
+.Ejercicio4 {
+    background-image: url('https://www.google.com.ar/url?sa=i&url=https%3A%2F%2Fes.m.wikipedia.org%2Fwiki%2FArchivo%3AEscudo_del_Club_Atl%25C3%25A9tico_Boca_Juniors.svg&psig=AOvVaw3OSIGqtbMZbiK-i5eB62Q2&ust=1693429562847000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCNiHo-rigoEDFQAAAAAdAAAAABAJ');
+  
+}
+
+.Ejercicio8 {
+    background-color: beige;
+}
+
+    

@@ -8,36 +8,46 @@
 <body>
     <h1><strong><strong>Registrar un usuario</strong></h1>
     <form action="https://formsubmit.co/marianobenegas33@gmail" method="post">
-        <label for="nombre"><strong>Nombre del usuario</strong></label><br>
-        <input type="text" id="nombre" name="nombre"><br>
-        <label ><strong>Contraseña del usuario</strong></label><br>
-        <input type="password" name="contraseña"><br>
-        <label ><strong>Edad del Usuario</strong></label><br>
-        <input type="number" name="edad"><br>
-        <label ><strong>Fecha de nacimiento</strong></label><br>
-        <input type="date" name="nacimiento">
-        <label ><strong>Sexo del usuario</strong></label><br>
-        <input type="radio" id="hombre" name="sexo" value="1">
-        <label for="hombre">Hombre</label>
-        <br>
-        <input type="radio" id="mujer" name="sexo" value="2">
-        <label for="mujer">Mujer</label>
-        <br>
-        <input type="radio" id="undefined" name="sexo" value="3">
-        <label for="undefined">Prefiero no decir</label>
-        <br>
-        <label ><strong>Pais de nacimiento del usuario</strong></label><br>
-        <select name="pais" id="pais">
-            <option value="arg">Argentina</option>
-            <option value="chi">Chile</option>
-            <option value="bra">Brasil</option>
-            <option value="uru">Uruguay</option>
-            <option value="bol">Bolivia</option>
-            <option value="par">Paraguay</option>
-        </select>
-        <br>
+        <div>
+            <label for="nombre"><strong>Nombre del usuario</strong></label><br>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div>
+            <label ><strong>Contraseña del usuario</strong></label><br>
+            <input type="password" name="contraseña">
+        </div>
+        <div>
+            <label ><strong>Edad del Usuario</strong></label><br>
+            <input type="number" name="edad">
+        </div>
+        <div>
+            <label ><strong>Fecha de nacimiento</strong></label><br>
+            <input type="date" name="nacimiento">
+        </div>
+        <div>   
+            <label ><strong>Sexo del usuario</strong></label><br>
+            <input type="radio" id="hombre" name="sexo" value="1">
+            <label for="hombre">Hombre</label> <br>       
+            <input type="radio" id="mujer" name="sexo" value="2">
+            <label for="mujer">Mujer</label><br>        
+            <input type="radio" id="undefined" name="sexo" value="3">
+            <label for="undefined">Prefiero no decir</label><br>
+        </div> 
+        <div>
+            <label for="pais"><strong>Pais de nacimiento del usuario</strong></label><br>
+            <select name="pais" id="pais">
+                <option value="arg">Argentina</option>
+                <option value="chi">Chile</option>
+                <option value="bra">Brasil</option>
+                <option value="uru">Uruguay</option>
+                <option value="bol">Bolivia</option>
+                <option value="par">Paraguay</option>
+            </select>
+        <div>
+        <div>   
         <button type="submit"><strong>Enviar</strong></button>
         <button type="reset"><strong>Borrar</strong></button>
+        </div> 
     </form>
 </body>
 </html>
